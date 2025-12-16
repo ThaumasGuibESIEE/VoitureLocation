@@ -19,7 +19,6 @@ Console.WriteLine($"Kilomètres depuis maintenance : {vehicule.Kilometrage - veh
 Console.WriteLine($"Jours depuis maintenance : {(DateTime.UtcNow - vehicule.DerniereMaintenance).TotalDays:F0} jours");
 Console.WriteLine($"Maintenance due : {(vehicule.MaintenanceDue() ? "Oui" : "Non")}");
 
-﻿
 Console.WriteLine("Hello, World!");
 
 Client thaumas = new Client(true,"Thaumas",1);
