@@ -35,13 +35,8 @@ thaumas.toString();
 
 
 
-Location loc1 = new Location(thaumas, vehicule, opts, 29, 1 ) ;
 
 
-loc1.locIsValid();
-
-Console.WriteLine(loc1.getPrix());
-Console.WriteLine(loc1.getPriceToPay());
 
 
 
@@ -59,4 +54,4 @@ foreach (var opt in loc1.getOptions())
     var typeLibelle = opt.isPrixJournalier() ? "par jour" : "forfait";
     Console.WriteLine($" - {opt.getNom()} ({typeLibelle}) : {optionCost:0.00} EUR");
 }
-Console.WriteLine($"Prix total location : {loc1.getPrix():0.00} EUR");
+Console.WriteLine($"Prix total location : {loc1.getPriceToPay():0.00} EUR");

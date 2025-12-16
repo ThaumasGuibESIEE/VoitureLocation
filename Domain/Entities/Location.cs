@@ -26,7 +26,6 @@ public class Location{
     private float priceToPay ;
 
     public Location(Client cl, Vehicule veh, List<Options> opts, int dur , int loc){
-    private Location(Client cl, Vehicule veh, List<Options> opts, int dur , int loc){
         client= cl;
         vehicule = veh;
         options = opts;
@@ -127,6 +126,7 @@ public class Location{
         {
             setPriceToPay(getPrix());
         }
+    }
     public bool IsValid()
     {
         return isValid;
