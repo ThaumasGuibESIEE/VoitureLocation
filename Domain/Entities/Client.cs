@@ -23,7 +23,20 @@ public class Client{
         
     }
 
+    public void setVoitureLoue(int i)
+    {
+        voitureLoue = i;
+    }
 
+    public int getVoitureLoue()
+    {
+        return voitureLoue;
+    }
+
+    public List<int> getLocation()
+    {
+        return location;
+    }
 
 
 
