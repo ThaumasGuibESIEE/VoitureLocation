@@ -9,6 +9,18 @@ var vehicule = new Vehicule(
     derniereMaintenance: DateTime.UtcNow.AddMonths(-7),
     kilometrageDerniereMaintenance: 5_000);
 
+vehicule.setPrix(500.00f);
+
+var opt1 = new Options("Assurance Supplémentaire", 149.99f);
+var opt2 = new Options("Siege enfant", 20f);
+var opt3 = new Options("GPS", 120f);
+
+
+List<Options> opts = new List<Options>();
+opts.Add(opt1);
+opts.Add(opt2);
+opts.Add(opt3);
+
 Console.WriteLine("=== Fiche véhicule ===");
 Console.WriteLine($"Modèle : {vehicule.Modele}");
 Console.WriteLine($"Plaque : {vehicule.Plaque}");
@@ -24,5 +36,14 @@ Console.WriteLine("Hello, World!");
 Client thaumas = new Client(true,"Thaumas",1);
 
 thaumas.toString();
+
+
+
+Location loc1 = new Location(thaumas, vehicule, opts, 29, 1 ) ;
+
+
+loc1.locIsValid();
+
+Console.WriteLine(loc1.getPrix());
 
 
