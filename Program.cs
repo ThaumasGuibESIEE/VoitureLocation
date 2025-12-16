@@ -33,6 +33,18 @@ Console.WriteLine($"Maintenance due : {(vehicule.MaintenanceDue() ? "Oui" : "Non
 Client thaumas = new Client(true,"Thaumas",1);
 thaumas.toString();
 
+
+
+Location loc1 = new Location(thaumas, vehicule, opts, 29, 1 ) ;
+
+
+loc1.locIsValid();
+
+Console.WriteLine(loc1.getPrix());
+Console.WriteLine(loc1.getPriceToPay());
+
+
+
 Location loc1 = Location.Create(thaumas, vehicule, opts, 29, 1 ) ;
 
 Console.WriteLine();

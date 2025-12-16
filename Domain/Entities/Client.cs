@@ -38,6 +38,11 @@ public class Client{
         return location;
     }
 
+    public void generateFact()
+    {
+        
+    }
+
     public string getNom()
     {
         return nom;
