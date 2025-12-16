@@ -1,0 +1,30 @@
+# Build outputs
+/bin/
+/obj/
+/out/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# User-specific
+*.user
+*.suo
+*.userprefs
+
+# Logs / temp
+*.log
+*.tmp
+
+# Dotnet tooling
+/.idea/
+/.ionide/
+
+# Test artifacts
+TestResult*/
+.coverage
+coverage*.json
+
+# OS junk
+.DS_Store
+Thumbs.db
