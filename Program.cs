@@ -45,5 +45,7 @@ Location loc1 = new Location(thaumas, vehicule, opts, 29, 1 ) ;
 loc1.locIsValid();
 
 Console.WriteLine(loc1.getPrix());
+Console.WriteLine(loc1.getPriceToPay());
+
 
 
