@@ -1,3 +1,4 @@
+
 using VoitureLocations.Domain.Entities;
 
 // Démo : affichage des informations d'un véhicule
@@ -17,3 +18,12 @@ Console.WriteLine($"Kilométrage à la dernière maintenance : {vehicule.Kilomet
 Console.WriteLine($"Kilomètres depuis maintenance : {vehicule.Kilometrage - vehicule.KilometrageDerniereMaintenance} km");
 Console.WriteLine($"Jours depuis maintenance : {(DateTime.UtcNow - vehicule.DerniereMaintenance).TotalDays:F0} jours");
 Console.WriteLine($"Maintenance due : {(vehicule.MaintenanceDue() ? "Oui" : "Non")}");
+
+﻿
+Console.WriteLine("Hello, World!");
+
+Client thaumas = new Client(true,"Thaumas",1);
+
+thaumas.toString();
+
+
