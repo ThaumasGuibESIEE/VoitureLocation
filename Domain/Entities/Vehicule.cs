@@ -3,18 +3,20 @@ using System;
 namespace VoitureLocations.Domain.Entities;
 
 /// <summary>
-/// Représente un véhicule de la flotte.
+/// Represente un vehicule de la flotte.
 /// Une maintenance est requise tous les 10 000 km ou tous les 6 mois.
 /// </summary>
 public sealed class Vehicule
 {
     private const int IntervalleKilometresMaintenance = 10_000;
-    private static readonly TimeSpan IntervalleTempsMaintenance = TimeSpan.FromDays(182.5); // ≈ 6 mois
+    private static readonly TimeSpan IntervalleTempsMaintenance = TimeSpan.FromDays(182.5); // ~ 6 mois
     private float prix;
+    private bool estLouee;
+
     public Vehicule(string modele, string plaque, int kilometrage, DateTime? derniereMaintenance = null, int? kilometrageDerniereMaintenance = null)
     {
         Modele = string.IsNullOrWhiteSpace(modele)
-            ? throw new ArgumentException("Le modèle est requis.", nameof(modele))
+            ? throw new ArgumentException("Le modele est requis.", nameof(modele))
             : modele.Trim();
 
         Plaque = string.IsNullOrWhiteSpace(plaque)
@@ -23,7 +25,7 @@ public sealed class Vehicule
 
         if (kilometrage < 0)
         {
-            throw new ArgumentOutOfRangeException(nameof(kilometrage), "Le kilométrage ne peut pas être négatif.");
+            throw new ArgumentOutOfRangeException(nameof(kilometrage), "Le kilometrage ne peut pas etre negatif.");
         }
 
         Kilometrage = kilometrage;
@@ -36,35 +38,35 @@ public sealed class Vehicule
     public string Plaque { get; }
 
     /// <summary>
-    /// Kilométrage actuel du véhicule.
+    /// Kilometrage actuel du vehicule.
     /// </summary>
     public int Kilometrage { get; private set; }
 
     /// <summary>
-    /// Date de la dernière maintenance effectuée (UTC).
+    /// Date de la derniere maintenance effectuee (UTC).
     /// </summary>
     public DateTime DerniereMaintenance { get; private set; }
 
     /// <summary>
-    /// Kilométrage lors de la dernière maintenance.
+    /// Kilometrage lors de la derniere maintenance.
     /// </summary>
     public int KilometrageDerniereMaintenance { get; private set; }
 
     /// <summary>
-    /// Met à jour le kilométrage courant.
+    /// Met a jour le kilometrage courant.
     /// </summary>
     public void MettreAJourKilometrage(int nouveauKilometrage)
     {
         if (nouveauKilometrage < Kilometrage)
         {
-            throw new ArgumentOutOfRangeException(nameof(nouveauKilometrage), "Le kilométrage ne peut pas diminuer.");
+            throw new ArgumentOutOfRangeException(nameof(nouveauKilometrage), "Le kilometrage ne peut pas diminuer.");
         }
 
         Kilometrage = nouveauKilometrage;
     }
 
     /// <summary>
-    /// Indique si une maintenance est due selon les seuils kilométrique ou temporel.
+    /// Indique si une maintenance est due selon les seuils kilometrique ou temporel.
     /// </summary>
     public bool MaintenanceDue(DateTime? dateReference = null)
     {
@@ -77,7 +79,7 @@ public sealed class Vehicule
     }
 
     /// <summary>
-    /// Marque la maintenance comme effectuée à la date courante et kilométrage actuel.
+    /// Marque la maintenance comme effectuee a la date courante et kilometrage actuel.
     /// </summary>
     public void MarquerMaintenanceEffectuee(DateTime? dateMaintenance = null)
     {
@@ -93,5 +95,20 @@ public sealed class Vehicule
     public void setPrix(float a)
     {
         prix = a;
+    }
+
+    public bool EstLouee()
+    {
+        return estLouee;
+    }
+
+    public void MarquerLouee()
+    {
+        estLouee = true;
+    }
+
+    public void MarquerDisponible()
+    {
+        estLouee = false;
     }
 }

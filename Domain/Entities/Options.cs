@@ -1,3 +1,5 @@
+namespace VoitureLocations.Domain.Entities;
+
 public class Options{
     
     private string nom;

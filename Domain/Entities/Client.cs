@@ -1,4 +1,4 @@
-
+namespace VoitureLocations.Domain.Entities;
 
 public class Client{
 
@@ -8,6 +8,7 @@ public class Client{
 
     private int voitureLoue = 0;
     private List<int> location = new List<int>();
+    private List<Facture> factures = new List<Facture>();
 
     private  bool premium = false;
 
@@ -38,11 +39,6 @@ public class Client{
         return location;
     }
 
-    public void generateFact()
-    {
-        
-    }
-
     public string getNom()
     {
         return nom;
@@ -56,6 +52,16 @@ public class Client{
     public bool isPremium()
     {
         return premium;
+    }
+
+    public void addFacture(Facture facture)
+    {
+        factures.Add(facture);
+    }
+
+    public IReadOnlyList<Facture> getFactures()
+    {
+        return factures;
     }
 
 
