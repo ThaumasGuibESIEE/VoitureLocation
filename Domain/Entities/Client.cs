@@ -43,6 +43,20 @@ public class Client{
         
     }
 
+    public string getNom()
+    {
+        return nom;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public bool isPremium()
+    {
+        return premium;
+    }
 
 
 }
