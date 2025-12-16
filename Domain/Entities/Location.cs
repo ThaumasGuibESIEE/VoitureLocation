@@ -51,21 +51,7 @@ public class Location{
         }
 
         if (client.getVoitureLoue() >= MaxLocationsParClient)
-        {
-            client.setVoitureLoue(client.getVoitureLoue()+1);
-            client.getLocation().Add(idLoc);
-            setPrix(getPrix() + vehicule.getPrix());
-            foreach (var item in options)
-            {
-                setPrix(getPrix()+item.getPrix());
-            }
-            if (duree>= 7)
-            {
-                reduction = 15;
-            }
-            calcPriceToPay();
-
-            // Augmenter prix via prix opts et vehicule et de la durée
+        {           
             isValid = false;
             throw new InvalidOperationException($"Le client ne peut pas avoir plus de {MaxLocationsParClient} locations simultanées.");
         }
@@ -78,6 +64,11 @@ public class Location{
             var optionPrix = item.isPrixJournalier() ? item.getPrix() * duree : item.getPrix();
             setPrix(getPrix()+optionPrix);
         }
+        if (duree>= 7)
+        {
+            reduction = 15;
+        }
+        calcPriceToPay();
 
         isValid = true;
         return true;
