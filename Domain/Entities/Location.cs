@@ -92,7 +92,6 @@ public class Location{
         if (getReduction() != 0)
         {
             float var = getPrix() * (getReduction()/100f) ;
-            Console.WriteLine("LAAAAAAAAAAAA: " +var);
             setPriceToPay(getPrix()- var);
         }
         else
