@@ -38,6 +38,20 @@ public class Client{
         return location;
     }
 
+    public string getNom()
+    {
+        return nom;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public bool isPremium()
+    {
+        return premium;
+    }
 
 
 }
