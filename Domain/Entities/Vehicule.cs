@@ -10,7 +10,7 @@ public sealed class Vehicule
 {
     private const int IntervalleKilometresMaintenance = 10_000;
     private static readonly TimeSpan IntervalleTempsMaintenance = TimeSpan.FromDays(182.5); // ≈ 6 mois
-
+    private float prix;
     public Vehicule(string modele, string plaque, int kilometrage, DateTime? derniereMaintenance = null, int? kilometrageDerniereMaintenance = null)
     {
         Modele = string.IsNullOrWhiteSpace(modele)
@@ -83,5 +83,15 @@ public sealed class Vehicule
     {
         DerniereMaintenance = (dateMaintenance ?? DateTime.UtcNow).ToUniversalTime();
         KilometrageDerniereMaintenance = Kilometrage;
+    }
+
+    public float getPrix()
+    {
+        return prix;
+    }
+
+    public void setPrix(float a)
+    {
+        prix = a;
     }
 }

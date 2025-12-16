@@ -8,7 +8,7 @@ public class Location{
 
     private Vehicule vehicule;
 
-    private string[] options; // Options  a creer
+    private List<Options> options; 
 
     private int duree; // en jours
 
@@ -16,11 +16,14 @@ public class Location{
 
     private int idLoc;
 
-    public Location(Client cl, Vehicule veh, string[] opts, int dur){
+    private float prix = 0;
+
+    public Location(Client cl, Vehicule veh, List<Options> opts, int dur , int loc){
         client= cl;
         vehicule = veh;
         options = opts;
         duree = dur;
+        idLoc = loc;
     }
 
     public void locIsValid(){
@@ -30,6 +33,13 @@ public class Location{
         {
             client.setVoitureLoue(client.getVoitureLoue()+1);
             client.getLocation().Add(idLoc);
+            setPrix(getPrix() + vehicule.getPrix());
+            foreach (var item in options)
+            {
+                setPrix(getPrix()+item.getPrix());
+            }
+
+            // Augmenter prix via prix opts et vehicule et de la durée
         }
 
     }
@@ -37,6 +47,17 @@ public class Location{
     public int getIdLoc()
     {
         return idLoc;
+    }
+
+
+    public float getPrix()
+    {
+        return prix;
+    }
+
+    public void setPrix(float f)
+    {
+        prix = f;
     }
 
 
