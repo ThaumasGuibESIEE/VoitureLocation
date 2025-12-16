@@ -1,11 +1,16 @@
-# Build outputs
-/bin/
-/obj/
-/out/
+# Build outputs (any project)
+bin/
+obj/
+out/
+**/bin/
+**/obj/
+**/out/
 
-# Visual Studio / VS Code
+# IDE / tooling
 .vs/
 .vscode/
+.idea/
+.ionide/
 
 # User-specific
 *.user
@@ -15,10 +20,6 @@
 # Logs / temp
 *.log
 *.tmp
-
-# Dotnet tooling
-/.idea/
-/.ionide/
 
 # Test artifacts
 TestResult*/
