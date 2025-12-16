@@ -1,0 +1,15 @@
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\bin\Debug\net10.0\VoitureLocation.exe
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\bin\Debug\net10.0\VoitureLocation.deps.json
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\bin\Debug\net10.0\VoitureLocation.runtimeconfig.json
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\bin\Debug\net10.0\VoitureLocation.dll
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\bin\Debug\net10.0\VoitureLocation.pdb
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.AssemblyInfoInputs.cache
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.AssemblyInfo.cs
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.csproj.CoreCompileInputs.cache
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.sourcelink.json
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.dll
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\refint\VoitureLocation.dll
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.pdb
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\VoitureLocation.genruntimeconfig.cache
+C:\Users\ThaumasGuibert\Documents\ESIEE-IT\VoitureLocations\obj\Debug\net10.0\ref\VoitureLocation.dll
